@@ -59,4 +59,72 @@ public class MorseTest {
         String result = morse.convert("567");
         assert result.equals(". . . . . _ . . . . _ _ . . .");
     }
+
+    @Test
+    public void given_18_check_value_of_18_in_morse() {
+        IOAdapter mock = mock(IOAdapter.class);
+        Morse morse = new Morse(mock);
+        String result = morse.convert("18");
+        assert result.equals(". _ _ _ _ _ _ _ . .");
+    }
+
+    @Test
+    public void given_96_check_value_of_96_in_morse() {
+        IOAdapter mock = mock(IOAdapter.class);
+        Morse morse = new Morse(mock);
+        String result = morse.convert("96");
+        assert result.equals("_ _ _ _ . _ . . . .");
+    }
+
+    @Test
+    public void given_07_check_value_of_07_in_morse() {
+        IOAdapter mock = mock(IOAdapter.class);
+        Morse morse = new Morse(mock);
+        String result = morse.convert("07");
+        assert result.equals("_ _ _ _ _ _ _ . . .");
+    }
+
+    @Test
+    public void given_56_check_value_of_56_in_morse() {
+        IOAdapter mock = mock(IOAdapter.class);
+        Morse morse = new Morse(mock);
+        String result = morse.convert("56");
+        assert result.equals(". . . . . _ . . . .");
+    }
+
+    @Test
+    public void given_12345_check_value_of_12345_in_morse() {
+        IOAdapter mock = mock(IOAdapter.class);
+        Morse morse = new Morse(mock);
+        String result = morse.convert("12345");
+        assert result.equals(". _ _ _ _ . . _ _ _ . . . _ _ . . . . _ . . . . .");
+    }
+    @Test
+    public void given_4_check_value_of_4_in_morse() {
+        IOAdapter mock = mock(IOAdapter.class);
+        Morse morse = new Morse(mock);
+        String result = morse.convert("4");
+        assert result.equals(". . . . _");
+    }
+    @Test
+    public void given_78_check_value_of_78_in_morse() {
+        IOAdapter mock = mock(IOAdapter.class);
+        Morse morse = new Morse(mock);
+        String result = morse.convert("78");
+        assert result.equals("_ _ . . . _ _ _ . .");
+    }
+    @Test
+    public void given_34_check_value_of_34_in_morse() {
+        IOAdapter mock = mock(IOAdapter.class);
+        Morse morse = new Morse(mock);
+        String result = morse.convert("34");
+        assert result.equals(". . . _ _ . . . . _");
+    }
+    @Test
+    public void given_71_check_value_of_71_in_morse() {
+        IOAdapter mock = mock(IOAdapter.class);
+        Morse morse = new Morse(mock);
+        String result = morse.convert("71");
+        assert result.equals("_ _ . . . . _ _ _ _");
+    }
 }
