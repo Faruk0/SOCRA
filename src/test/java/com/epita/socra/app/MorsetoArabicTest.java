@@ -43,6 +43,35 @@ public class MorsetoArabicTest {
     }
 
     @Test
+    public void given_12345_check_value_of_12345_in_arabic() {
+        IOAdapter mock = mock(IOAdapter.class);
+        MorsetoArabic morse = new MorsetoArabic(mock);
+        int result = morse.convert(". _ _ _ _ . . _ _ _ . . . _ _ . . . . _ . . . . .");
+        assert result == 12345;
+    }
+
+    @Test
+    public void given_71_check_value_of_71_in_arabic() {
+        IOAdapter mock = mock(IOAdapter.class);
+        MorsetoArabic morse = new MorsetoArabic(mock);
+        int result = morse.convert("_ _ . . . . _ _ _ _");
+        assert result == 71;
+    }
+    @Test
+    public void given_34_check_value_of_34_in_arabic() {
+        IOAdapter mock = mock(IOAdapter.class);
+        MorsetoArabic morse = new MorsetoArabic(mock);
+        int result = morse.convert(". . . _ _ . . . . _");
+        assert result == 34;
+    }
+    @Test
+    public void given_78_check_value_of_78_in_arabic() {
+        IOAdapter mock = mock(IOAdapter.class);
+        MorsetoArabic morse = new MorsetoArabic(mock);
+        int result = morse.convert("_ _ . . . _ _ _ . .");
+        assert result == 78;
+    }
+    @Test
     public void given_567_check_value_of_567_in_arabic() {
         IOAdapter mock = mock(IOAdapter.class);
         MorsetoArabic morse = new MorsetoArabic(mock);
